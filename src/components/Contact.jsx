@@ -64,7 +64,7 @@ export default function Contact ()
                                     <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
                                 </a>
 
-                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://github.com/Pannnomaly" target="_blank" rel="noopener noreferrer">
+                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://github.com/Pannnomaly1337" target="_blank" rel="noopener noreferrer">
                                     <span>GitHub</span>
                                     <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
                                 </a>
