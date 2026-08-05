@@ -183,6 +183,10 @@
     }
 }
 
+.project-swiper .swiper-wrapper {
+    align-items: flex-start;
+}
+
 /* vertical ipad size */
 @media screen and (min-width: 768px) {
     #blob-animate-hero {
