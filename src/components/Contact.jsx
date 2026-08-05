@@ -16,7 +16,7 @@ export default function Contact ()
                         <h2 className="mb-10 text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem]">Contact Me</h2>
 
                         <p className="font-unbounded mb-8 text-[1.25rem] md:text-[1.5rem]">
-                            Tell me about your next project.
+                            Open to full-stack developer roles — let&apos;s connect.
                         </p>
 
                         <CopyToClipboard text="s.jangtrakul@gmail.com" onCopy={() => {setCopied(true); setTimeout(() => setCopied(false), 2000);}}>
@@ -36,7 +36,7 @@ export default function Contact ()
 
                             <div>
                                 <h3 className="text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] text-(--first-color) text-center mb-2 lg:mb-3">Location</h3>
-                                <address className="text-(--title-color) not-italic font-medium text-center text-[1.25rem] md:text-[1.5rem]">Bangkok, Thailand</address>
+                                <address className="text-(--title-color) not-italic font-medium text-center text-[1.25rem] md:text-[1.5rem]">Bangkok, Thailand (open to relocation)</address>
                             </div>
                         </div>
 
@@ -49,44 +49,24 @@ export default function Contact ()
                                     <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
                                 </a>
 
-                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://th.jobsdb.com/th/profiles/ศุภวิชญ์-จังตระกูล-lLPkHHNVJW" target="_blank" rel="noopener noreferrer">
-                                    <span>Jobsdb</span>
-                                    <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
-                                </a>
-                                    
-                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://www.fiverr.com/pannnomaly/" target="_blank" rel="noopener noreferrer">
-                                    <span>Fiverr</span>
-                                    <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
-                                </a>
-
-                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="/tbc" target="_blank">
-                                    <span>Etsy</span>
-                                    <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
-                                </a>
-
                                 <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://github.com/Pannnomaly1337" target="_blank" rel="noopener noreferrer">
                                     <span>GitHub</span>
+                                    <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
+                                </a>
+
+                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://th.jobsdb.com/th/profiles/ศุภวิชญ์-จังตระกูล-lLPkHHNVJW" target="_blank" rel="noopener noreferrer">
+                                    <span>Jobsdb</span>
                                     <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
                                 </a>
                             </div>
                         </div>
 
                         <div className="lg:justify-self-end">
-                            <h3 className="text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] text-(--first-color) text-center mb-2 lg:mb-3">Write Me & We will Talk</h3>
+                            <h3 className="text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] text-(--first-color) text-center mb-2 lg:mb-3">Write Me &amp; We will Talk</h3>
 
                             <div className="grid grid-cols-[max-content] justify-center gap-y-1">
                                 <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="https://www.facebook.com/pann.supawith.jangtrakul" target="_blank" rel="noopener noreferrer">
                                     <span>Facebook</span>
-                                    <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
-                                </a>
-
-                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="/tbc" target="_blank">
-                                    <span>Instagram</span>
-                                    <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
-                                </a>
-
-                                <a id="contact-link" className="flex items-center text-[1.25rem] md:text-[1.5rem] text-(--title-color) font-medium justify-between gap-x-2 lg:gap-x-4" href="/tbc" target="_blank">
-                                    <span>Steam</span>
                                     <svg className="w-6 h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 shrink-0 font-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.63589 19.7784L4.22169 18.3644L15.657 6.92908L10.0712 6.92908V4.92908L19.0712 4.92908L19.0712 13.9291H17.0712L17.0712 8.34326L5.63589 19.7784Z"></path></svg>
                                 </a>
                             </div>
