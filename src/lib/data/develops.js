@@ -67,4 +67,36 @@ export const develops = [
         id: 17,
         name: "Git & Github",
     },
+    {
+        id: 18,
+        name: "shadcn/ui",
+    },
+    {
+        id: 19,
+        name: "React Hook Form",
+    },
+    {
+        id: 20,
+        name: "Zod",
+    },
+    {
+        id: 21,
+        name: "REST APIs",
+    },
+    {
+        id: 22,
+        name: "JWT",
+    },
+    {
+        id: 23,
+        name: "bcrypt",
+    },
+    {
+        id: 24,
+        name: "Socket.IO",
+    },
+    {
+        id: 25,
+        name: "Vercel",
+    },
 ];
