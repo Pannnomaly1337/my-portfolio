@@ -108,7 +108,6 @@ export const projects = [
         number: "05",
         category: "Frontend Web",
         title: "Online Flower Shop",
-        status: "In progress",
         description:
             "A responsive online flower-shop storefront built from a design concept, focused on clean UI and layout across devices.",
         tech: [
