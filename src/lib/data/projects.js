@@ -47,7 +47,6 @@ export const projects = [
         number: "03",
         category: "Full - Stack Web",
         title: "Gamification Rewards System",
-        status: "Demo offline",
         description:
             "A full-stack app implementing a complete game loop — play, earn score, claim rewards, view history, reset — backed by a typed REST API and a relational schema.",
         tech: [
@@ -61,8 +60,8 @@ export const projects = [
             "Git & Github",
         ],
         image: "project-002.png",
-        live: "",
-        repo: "https://github.com/Pannnomaly/nextzy-gamification",
+        live: "https://gamification-rewards-system.vercel.app/",
+        repo: "https://github.com/Pannnomaly1337/gamification-rewards-system",
     },
     // {
     //     id: 4,
