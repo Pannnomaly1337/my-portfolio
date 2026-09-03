@@ -1,71 +1,73 @@
-import { useEffect } from "react";
-import Container from "../lib/Container.jsx";
+import { useEffect, useState } from "react";
 
-export default function Navbar() 
-{
+const LINKS = [
+    { href: "#about", label: "About" },
+    { href: "#work", label: "Projects" },
+    { href: "#skills", label: "Skills" },
+    { href: "#journey", label: "Journey" },
+    { href: "#contact", label: "Contact" },
+];
+
+export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
     useEffect(() => {
+        // scroll progress bar
+        const onScroll = () => {
+            const h = document.documentElement;
+            const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+            const bar = document.getElementById("progress");
+            if (bar) bar.style.width = pct + "%";
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
 
-    const sectionIds = [
-    "hero-section",
-    "about-me-section",
-    "projects-section",
-    "contact-section"
-    ];
-
-    const sections = sectionIds.map(id => document.getElementById(id));
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    const observer = new IntersectionObserver((entries) => {
-
-        entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-            navLinks.forEach((link) => {
-            link.classList.remove("active");
-            });
-
-            const activeLink = document.querySelector(
-            `.nav-link[href="#${entry.target.id}"]`
-            );
-
-            activeLink?.classList.add("active");
-
-        }
-
+        // active nav highlight
+        const ids = ["about", "work", "skills", "journey", "contact"];
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll(".nav-link").forEach((l) =>
+                            l.classList.toggle("active", l.getAttribute("href") === "#" + entry.target.id)
+                        );
+                    }
+                });
+            },
+                { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+        );
+        ids.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
         });
 
-    },
-    {
-        threshold: 0.25
-    });
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            observer.disconnect();
+        };
     }, []);
 
     return (
-        <nav className="fixed w-full py-2 pt-5 bg-linear-to-b from-(--body-color) from-60% to-[hsla(240,100%,2%,0)] z-(--z-fixed)">
-            <div id="blob-animate" className="-top-12 -left-12"></div>
+        <>
+            <div id="progress"></div>
+            <header className="nav">
+                <div className="container">
+                    <a href="#hero" className="brand">Supa<span>with</span></a>
 
-            <Container className="flex justify-between items-center py-4 font-unbounded tracking-widest">
-                <div className="font-semibold text-(--title-color) text-shadow-lg hover:text-(--first-color) self-start transition duration-400 ease-in-out">
-                    <a href="#hero-section">Supawith</a>
+                    <nav className={`nav-links ${open ? "open" : ""}`}>
+                        {LINKS.map((l) => (
+                            <a key={l.href} href={l.href} className="nav-link" onClick={() => setOpen(false)}>
+                                {l.label}
+                            </a>
+                        ))}
+                    </nav>
+
+                    <a href="#contact" className="nav-cta">Get in touch</a>
+
+                    <button className="burger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18v2H3zM3 11h18v2H3zM3 18h18v2H3z" /></svg>
+                    </button>
                 </div>
-                <ul className="flex flex-col items-end gap-y-2 md:flex-row md:gap-x-12 lg:gap-x-22">
-                    <li className="text-(--title-color) hover:text-(--first-color) font-semibold">
-                        <a href="#about-me-section" className="nav-link text-(--small-font-size) text-shadow-lg transition duration-400 ease-in-out">About Me</a>
-                    </li>
-                    <li className="text-(--title-color) hover:text-(--first-color) font-semibold">
-                        <a href="#projects-section" className="nav-link text-(--small-font-size) text-shadow-lg transition duration-400 ease-in-out">Projects</a>
-                    </li>
-                    <li className="text-(--title-color) hover:text-(--first-color) font-semibold">
-                        <a href="#contact-section" className="nav-link text-(--small-font-size) text-shadow-lg transition duration-400 ease-in-out">Contact</a>
-                    </li>
-                </ul>
-            </Container>
-        </nav>
+            </header>
+        </>
     );
 }
