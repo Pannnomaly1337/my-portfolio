@@ -34,4 +34,10 @@ export default defineConfig([
       'react/react-in-jsx-scope': 'off',
     },
   },
+    {
+    files: ['vite.config.js', 'eslint.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])

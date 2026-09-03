@@ -1,22 +1,50 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { projectsTitleReveal, projectsSliderReveal } from "../lib/animations/projectsReveal.js";
-import ProjectSlider from "./ProjectSlider.jsx";
-import Container from "../lib/Container.jsx";
+import { projects, projectFilters } from "@/lib/data/projects.js";
+import { reveal } from "@/lib/reveal.js";
+import FeaturedProject from "./FeaturedProject.jsx";
+import ProjectCard from "./ProjectCard.jsx";
 
-export default function Projects ()
-{
+export default function Projects() {
+    const [active, setActive] = useState("all");
+
+    const featured = projects.find((p) => p.featured);
+    const rest = projects.filter((p) => !p.featured);
+    const visible = active === "all" ? rest : rest.filter((p) => p.filter === active);
+
     return (
-        <div id="projects-section" className="pt-20 xl:min-h-screen lg:pt-36 lg:pb-16">
-            <Container>
-                <motion.h2 {...projectsTitleReveal} className="text-start text-[2rem] md:text-[2.5rem] md:text-center md:ml-0 lg:text-[3rem] xl:text-[3.25rem]">
-                    I make Incredible <br />
-                    <span className="text-(--first-color)">Projects</span>
-                </motion.h2>
-
-                <motion.div {...projectsSliderReveal} className="mt-16 mb-10 lg:mt-20 lg:mb-14 xl:mt-22 xl:mb-18">
-                    <ProjectSlider />
+        <section id="work" className="section">
+            <div className="container">
+                <motion.div className="sec-head" {...reveal}>
+                    <p className="eyebrow">Selected work</p>
+                    <h2>Projects I&apos;m proud of.</h2>
+                    <p className="desc">A production system, full-stack apps, and the fundamentals I built along the way.</p>
                 </motion.div>
-            </Container>
-        </div>
+
+                {featured && (
+                    <motion.div {...reveal}>
+                        <FeaturedProject project={featured} />
+                    </motion.div>
+                )}
+
+                <motion.div className="filters" {...reveal}>
+                    {projectFilters.map((f) => (
+                        <button
+                            key={f.key}
+                            className={`filter ${active === f.key ? "active" : ""}`}
+                            onClick={() => setActive(f.key)}
+                        >
+                            {f.label}
+                        </button>
+                    ))}
+                </motion.div>
+
+                <div className="grid">
+                    {visible.map((p) => (
+                        <ProjectCard key={p.id} project={p} />
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 }
