@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { reveal } from "@/lib/reveal.js";
 
 const EMAIL = "s.jangtrakul@gmail.com";
 const ARROW = "M5.63 19.78 4.22 18.36 15.66 6.93H10.07v-2h9v9h-2V8.34z";
+const DOWNLOAD = "M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z";
 
 const PROFILES = [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/supawith-jangtrakul-8920173a4/" },
@@ -12,30 +12,20 @@ const PROFILES = [
 ];
 const SAYHI = [
     { label: "Facebook", href: "https://www.facebook.com/pann.supawith.jangtrakul" },
-    { label: "Fiverr", href: "https://www.fiverr.com/pannnomaly/" },
 ];
 
 export default function Contact() {
-    const [copied, setCopied] = useState(false);
-
-    const copy = () => {
-        navigator.clipboard.writeText(EMAIL).then(() => {
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-        });
-    };
-
     return (
         <section id="contact" className="section">
             <div className="blob"></div>
             <div className="container">
                 <motion.div {...reveal}>
                     <h2>Let&apos;s build something.</h2>
-                    <p className="lead">Open to full-stack developer roles — let&apos;s connect.</p>
-                    <button className="btn copy-btn" onClick={copy}>
-                        <span>{copied ? "Email copied ✓" : "Copy email"}</span>
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3zm2 0h6v10h2V4H9v2z" /></svg>
-                    </button>
+                    <p className="lead">Open to frontend, backend &amp; full-stack roles — let&apos;s connect.</p>
+                    <a className="btn copy-btn" href={`mailto:${EMAIL}`}>
+                        <span>Email me</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" /></svg>
+                    </a>
                 </motion.div>
 
                 <motion.div className="contact-cards" {...reveal}>
@@ -47,6 +37,10 @@ export default function Contact() {
                     </div>
                     <div>
                         <h4>Profiles</h4>
+                        <a href="/pdf/supawithCV.pdf" download target="_blank" rel="noopener noreferrer">
+                            Resume
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d={DOWNLOAD} /></svg>
+                        </a>
                         {PROFILES.map((p) => (
                             <a key={p.label} href={p.href} target="_blank" rel="noopener noreferrer">
                                 {p.label}
