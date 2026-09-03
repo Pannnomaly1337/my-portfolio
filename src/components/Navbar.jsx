@@ -33,7 +33,7 @@ export default function Navbar() {
                     }
                 });
             },
-            { threshold: 0.4 }
+                { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
         );
         ids.forEach((id) => {
             const el = document.getElementById(id);

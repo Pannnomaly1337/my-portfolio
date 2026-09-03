@@ -23,12 +23,12 @@ export const skillGroups = [
         id: 4,
         icon: "tools",
         title: "Tools & Cloud",
-        items: ["Git & GitHub", "Vercel", "Render", "Google Gemini API"],
+        items: ["Git & GitHub", "Vercel", "Render", "Railway", "Google Gemini API"],
     },
     {
         id: 5,
         icon: "design",
         title: "Design",
-        items: ["Figma", "Canva", "Photoshop", "Lightroom", "Procreate", "After Effects"],
+        items: ["Figma", "Canva", "Photoshop", "Lightroom", "Procreate"],
     },
 ];

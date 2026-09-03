@@ -11,7 +11,7 @@ const SOCIALS = [
     { href: "https://github.com/Pannnomaly1337", label: "GitHub", path: "M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z" },
     { href: "https://www.linkedin.com/in/supawith-jangtrakul-8920173a4/", label: "LinkedIn", path: "M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm2.5 4A1.5 1.5 0 1 1 9 7.5 1.5 1.5 0 0 1 7.5 9zM6.5 10h2v7.5h-2zm5.5.43c.58-.57 1.27-.93 2-.93 2.07 0 3.5 1.68 3.5 3.75v4.25h-2v-4.25c0-.97-.78-1.75-1.75-1.75s-1.75.78-1.75 1.75v4.25h-2V10h2z" },
     { href: "https://www.facebook.com/pann.supawith.jangtrakul", label: "Facebook", path: "M14 19h5V5H5v14h7v-5h-2v-2h2v-1.65c0-1.34.14-1.82.4-2.31a2.72 2.72 0 0 1 1.13-1.14c.39-.2.86-.32 1.69-.38.33-.02.76.01 1.28.08V8.5h-.5c-.92 0-1.3.04-1.52.16a.98.98 0 0 0-.29.32c-.12.22-.16.45-.16 1.37V12h2.5l-.5 2H14v5z" },
-    { href: "https://www.fiverr.com/pannnomaly/", label: "Fiverr", path: "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm1.68 3.93h-1.5c-.56 0-.94.34-.94.86v.47h4.97v7.88h-2.53v-5.74h-2.44v5.74H8.71v-5.74H7.25V9.26h1.46v-.64c0-1.67 1.24-2.83 3.09-2.83h1.88v2.14z" },
+    { href: "https://th.jobsdb.com/th/profiles/ศุภวิชญ์-จังตระกูล-lLPkHHNVJW", label: "JobsDB", path: "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" },
 ];
 
 export default function Hero() {
@@ -24,7 +24,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
                 >
-                    <span className="status"><span className="dot"></span>Open to full-stack developer roles</span>
+                    <span className="status"><span className="dot"></span>Open to frontend, backend &amp; full-stack roles</span>
                     <p className="eyebrow">Hello, I&apos;m Supawith Jangtrakul</p>
                     <h1>I build full-stack<br />web apps, end to end.</h1>
                     <p className="hero-lead">
@@ -48,6 +48,14 @@ export default function Hero() {
                             </div>
                         ))}
                     </div>
+
+                    <div className="hero-social">
+                        {SOCIALS.map((s) => (
+                            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d={s.path} /></svg>
+                            </a>
+                        ))}
+                    </div>
                 </motion.div>
 
                 <motion.div
@@ -57,18 +65,12 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
                 >
                     <div className="blob"></div>
-                    <div className="hero-social">
-                        {SOCIALS.map((s) => (
-                            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d={s.path} /></svg>
-                            </a>
-                        ))}
-                    </div>
                     <div className="hero-portrait">
                         <img src="/hero-pic.PNG" alt="Supawith Jangtrakul" />
                     </div>
                 </motion.div>
             </div>
+
         </section>
     );
 }
