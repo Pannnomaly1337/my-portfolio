@@ -1,91 +1,149 @@
-# Developer Portfolio
+# Developer Portfolio — Supawith Jangtrakul
 
-A modern, interactive developer portfolio built to showcase my projects, skills, and experience.  
-This project focuses on creating a clean UI, smooth interactions, and a responsive experience across all devices.
+A modern, single-page developer portfolio showcasing my projects, skills, and
+experience. Built with a focus on a clean, distinctive UI (purple / black /
+white theme), smooth scroll-based interactions, and a fully responsive layout.
 
-## Highlights
+**Live:** https://supawith-portfolio.vercel.app/
 
-- Smooth section navigation with scroll-based routing
-- Motion-enhanced UI animations
-- Custom cursor interaction (desktop only)
-- Interactive project slider
-- Testimonial slider with continuous motion
-- Email copy-to-clipboard interaction
-- Error page handling for invalid routes
-- Fully responsive layout across breakpoints
+---
 
 ## Tech Stack
 
-**Frontend**
-- React
-- Tailwind CSS
-- JavaScript (ES6+)
+**Core**
+- React 19
+- Vite 7
+- Tailwind CSS 4 (`@tailwindcss/vite`)
 
 **Libraries**
-- Swiper
-- Anime.JS
-- Framer Motion
-- React Fast Marquee
-- React Copy to Clipboard
+- Framer Motion — scroll-reveal and entrance animations
+- React Router DOM 7 — routing (home + 404)
 
-**Tooling**
-- ESLint
-- Vercel (Deployment)
+**Tooling & Deployment**
+- ESLint (flat config)
+- Vercel
+
+**Typography:** Unbounded (display) + Montserrat (body), self-hosted.
+
+---
 
 ## Features
 
-### Navigation
-Section-based navigation implemented using React hooks (`useEffect`) for smooth scrolling behavior.
+- **Hero** — positioning statement, "open to work" status pill, dual CTAs
+  (view work / résumé), quick stats, and a social links rail.
+- **About** — background and focus, with availability chips.
+- **Projects** — a featured project spotlight (HotelHub) plus a
+  category-filterable grid (All / Full-Stack / Frontend / Logic / Basics),
+  filtered with React state.
+- **Skills** — grouped by category: Frontend, Backend, Database,
+  Tools & Cloud, and Design.
+- **Journey** — an Experience / Education timeline with a toggle.
+- **Testimonials** — a self-contained slider (React state, auto-advancing,
+  no external slider library).
+- **Contact** — `mailto:` action, résumé download, and profile links.
+- **Navbar** — scroll-progress bar, active-section highlight via
+  `IntersectionObserver` scroll-spy, and a mobile menu.
+- **404 page** — custom error page for unknown routes.
+- **SEO** — meta description plus Open Graph / Twitter Card tags for link
+  previews.
+- **Responsive** — verified on mobile, tablet, and desktop.
 
-### Motion & Interaction
-Animations across UI components using `Framer Motion` to enhance visual feedback and engagement.
+---
 
-### Hero Animation
-Dynamic text animation powered by `Anime.js` to create subtle motion effects in the hero section.
+## Project Structure
 
-### Project Showcase
-Interactive project slider using `Swiper.js` to browse projects smoothly.
+```
+src/
+├── assets/fonts/           # Unbounded + Montserrat (self-hosted)
+├── components/
+│   ├── Navbar.jsx          # nav + scroll progress + scroll-spy + mobile menu
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx        # featured spotlight + filterable grid
+│   ├── FeaturedProject.jsx
+│   ├── ProjectCard.jsx
+│   ├── Skills.jsx          # categorized skill groups
+│   ├── Journey.jsx         # experience / education timeline
+│   ├── Testimonial.jsx     # self-contained slider
+│   ├── Contact.jsx
+│   ├── Footer.jsx
+│   └── Layout.jsx
+├── pages/
+│   ├── Homepage.jsx        # composes all sections
+│   └── Error.jsx           # 404
+├── lib/
+│   ├── reveal.js           # shared Framer Motion reveal preset
+│   └── data/               # projects, skills, experiences, educations,
+│                           #   testimonials, footerYear
+├── App.jsx
+├── main.jsx                # router
+└── index.css               # Tailwind v4 theme tokens + component styles
+```
 
-### Testimonials
-Continuous testimonial slider powered by `react-fast-marquee`.
+---
 
-### Contact Interaction
-Copy email instantly using `react-copy-to-clipboard` to prevent user input errors.
+## Getting Started
 
-### Error Handling
-Custom error page to handle invalid routes and improve user navigation experience.
+```bash
+# install dependencies
+npm install
 
-### Responsive Design
-Optimized layout across mobile, tablet, and desktop devices.
+# start the dev server
+npm run dev
+
+# production build
+npm run build
+
+# preview the production build locally
+npm run preview
+
+# lint
+npm run lint
+```
+
+---
+
+## Deployment
+
+Deployed on **Vercel**. Pushes to `main` trigger a production deploy;
+pull requests get automatic preview deployments.
+
+---
 
 ## Development Workflow
 
 This project follows a structured Git workflow:
 
-`feature/* → develop → main`
+```
+feature/* (or fix/*) → develop → main
+```
 
-Each feature was developed in isolated branches and merged via Pull Requests.
+Each change is developed on an isolated branch and merged via Pull Requests,
+using Vercel preview deployments to validate UI and responsiveness before
+release.
 
-Example features developed during the project:
+---
 
-- `feature/custom-cursor`
-- `feature/navbar`
-- `feature/hero`
-- `feature/about`
-- `feature/projects`
-- `feature/work`
-- `feature/services`
-- `feature/testimonial`
-- `feature/contact`
-- `feature/footer`
-- `feature/motion`
+## Redesign Notes
 
-Preview deployments were used to validate UI behavior and responsiveness before final release.
+The portfolio was rebuilt from an earlier version. Key changes:
 
-## Deployment
+- Redesigned every section with a new layout, refreshed hero, a featured
+  project spotlight, categorized skills, and a reworked contact section.
+- Replaced the Swiper-based project slider with a filterable grid.
+- Replaced the marquee testimonial slider with a lightweight React slider.
+- Replaced copy-to-clipboard email with a `mailto:` link.
+- Removed the custom cursor and the unused `/tbc` route.
+- Removed now-unused dependencies: `swiper`, `animejs`,
+  `react-fast-marquee`, and `react-copy-to-clipboard`.
+- Added SEO / social-preview meta tags.
 
-The project is deployed using **Vercel**.
+---
 
 ## Author
 
-Built and designed by **Supawith Jangtrakul**.
+Built and designed by **Supawith Jangtrakul** (Pann).
+
+- Portfolio: https://supawith-portfolio.vercel.app/
+- GitHub: https://github.com/Pannnomaly1337
+- LinkedIn: https://www.linkedin.com/in/supawith-jangtrakul-8920173a4/
