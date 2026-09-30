@@ -23,7 +23,7 @@ export const skillGroups = [
         id: 4,
         icon: "tools",
         title: "Tools & Cloud",
-        items: ["Git & GitHub", "Vercel", "Render", "Railway", "Google Gemini API"],
+        items: ["Git & GitHub", "Docker", "Postman", "Vercel", "Render", "Neon", "Google Gemini API"],
     },
     {
         id: 5,
