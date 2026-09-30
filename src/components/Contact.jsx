@@ -37,7 +37,7 @@ export default function Contact() {
                     </div>
                     <div>
                         <h4>Profiles</h4>
-                        <a href="/pdf/supawithCV.pdf" download target="_blank" rel="noopener noreferrer">
+                        <a href="/pdf/supawith-jangtrakul-resume.pdf" download target="_blank" rel="noopener noreferrer">
                             Resume
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d={DOWNLOAD} /></svg>
                         </a>

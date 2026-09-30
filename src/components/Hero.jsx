@@ -34,7 +34,7 @@ export default function Hero() {
                             View my work
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.63 19.78 4.22 18.36 15.66 6.93H10.07v-2h9v9h-2V8.34z" /></svg>
                         </a>
-                        <a href="/pdf/supawithCV.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                        <a href="/pdf/supawith-jangtrakul-resume.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                             Download résumé
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h11l6 6zm-2 1h-5V4H5v16h14V9z" /></svg>
                         </a>
