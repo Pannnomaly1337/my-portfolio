@@ -12,8 +12,8 @@ export const educations = [
   },
   {
     id: 2,
-    title: "Generation Thailand",
-    subTitle: "Junior Software Developer Program",
+    title: "Junior Software Developer Bootcamp (Cohort 11)",
+    subTitle: "Generation Thailand",
     year: "2026",
     description:
       "A 15-week intensive bootcamp that transitioned me from a science background into practical software engineering. Through project-based training aligned with industry standards, I built full-stack web applications using React, Node.js, Express.js, and MongoDB. Beyond technical skills, the program strengthened my problem-solving mindset, teamwork, and professional readiness marking the foundation of my career in technology.",
