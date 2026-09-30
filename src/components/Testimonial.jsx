@@ -30,7 +30,6 @@ export default function Testimonial() {
                             {testimonials.map((t) => (
                                 <div className="tst" key={t.id}>
                                     <div className="tst-card">
-                                        <div className="tst-stars">{"★".repeat(Number(t.star))}</div>
                                         <p>&ldquo;{t.description}&rdquo;</p>
                                         <div className="tst-person">
                                             <img src={`/${t.image}`} alt={t.alt} />
