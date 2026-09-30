@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 const STATS = [
     { num: "8", lbl: "Projects built" },
     { num: "25+", lbl: "Technologies" },
-    { num: "1", lbl: "Production PMS" },
-    { num: "5.0★", lbl: "Mentor reviews" },
+    { num: "3", lbl: "Mentor reviews" },
 ];
 
 const SOCIALS = [
