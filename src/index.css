@@ -973,12 +973,6 @@
   padding: clamp(1.8rem, 3vw, 2.6rem);
   text-align: center;
 }
-.tst-stars {
-  color: var(--first-color);
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
 .tst-card p {
   font-size: 1.05rem;
   color: var(--text-color);
